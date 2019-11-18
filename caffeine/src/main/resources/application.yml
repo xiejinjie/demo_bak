@@ -1,0 +1,4 @@
+spring:
+  cache:
+    # caffeine Config
+    type: caffeine

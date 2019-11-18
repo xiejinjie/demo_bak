@@ -22,10 +22,10 @@ public class TreeSelectService {
         return treeSelectMapper.selectTree(rootId);
     }
     public TreeNode selectRoot(int id){
-        // 方法一
+        // 方法一 查找返回当前节点
         TreeNode node1 = findParent(id);
         TreeNode root1 = selectRoot(node1);
-        //方法二
+        //方法二 查找返回根节点
         TreeNode node2 = treeSelectMapper.selectNode(id);
         TreeNode root2 = selectParent(node2);
 
