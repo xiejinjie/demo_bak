@@ -1,6 +1,6 @@
 package com.demo.qywx.material;
 
-import com.demo.qywx.content.WxContent;
+import com.demo.qywx.wx.WxContent;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/material")
 public class MaterialController {
-    @GetMapping("/test")
-    public void test(){
-        System.out.println(WxContent.CORP_ID);
+    @GetMapping("/upload")
+    public void upload(){
+
     }
 
 }

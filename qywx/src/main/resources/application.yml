@@ -1,3 +1,9 @@
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
 qywx:
   corpId: wwc5825883bbe7b8e0
   secret:
