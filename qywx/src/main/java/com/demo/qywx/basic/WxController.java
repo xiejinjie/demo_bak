@@ -8,6 +8,7 @@ import com.sun.jndi.toolkit.url.Uri;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
@@ -21,6 +22,7 @@ public class WxController {
     WxRestTemplate wxRestTemplate;
 
     @GetMapping("token")
+    @ResponseBody
     public String getToken(){
         Map<String, String > param = new HashMap<>(2);
         param.put("corpid", WxContent.CORP_ID);
