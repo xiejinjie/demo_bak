@@ -33,6 +33,12 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        <!-- obs sdk -->
+        <dependency>
+            <groupId>com.huaweicloud</groupId>
+            <artifactId>esdk-obs-java</artifactId>
+            <version>3.19.5</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
