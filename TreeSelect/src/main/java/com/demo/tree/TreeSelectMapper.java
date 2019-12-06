@@ -1,6 +1,6 @@
-package com.demo.mapper;
+package com.demo.tree;
 
-import com.demo.model.TreeNode;
+import com.demo.tree.TreeNode;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
