@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @author jjxiek
  * @since 2019/12/6 14:21
  */
-@Configuration
+//@Configuration
 public class PageHelperConfig {
     @Bean
     public PageHelper createPageHelper(){
