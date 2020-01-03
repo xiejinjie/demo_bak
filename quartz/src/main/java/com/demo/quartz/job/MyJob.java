@@ -15,6 +15,7 @@ public class MyJob extends QuartzJobBean {
     protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.out.println("start My Job：" + LocalDateTime.now());
         try {
+            System.out.println("执行我的任务");
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
