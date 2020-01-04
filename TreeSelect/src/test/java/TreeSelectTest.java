@@ -1,6 +1,6 @@
 import com.demo.SpringbootApplication;
-import com.demo.model.TreeNode;
-import com.demo.service.TreeSelectService;
+import com.demo.tree.TreeNode;
+import com.demo.tree.TreeSelectService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

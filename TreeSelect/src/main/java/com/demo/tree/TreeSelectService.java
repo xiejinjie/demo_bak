@@ -1,7 +1,5 @@
-package com.demo.service;
+package com.demo.tree;
 
-import com.demo.mapper.TreeSelectMapper;
-import com.demo.model.TreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

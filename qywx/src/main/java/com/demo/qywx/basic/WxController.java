@@ -26,10 +26,12 @@ public class WxController {
         Map<String, String > param = new HashMap<>(2);
         param.put("corpid", WxContent.CORP_ID);
         param.put("corpsecret", WxContent.CONTACT_SECRET);
-//        URI uri = new URI();
 
         TokenResponse response = wxRestTemplate.getForObject(WxApi.GET_TOKEN, TokenResponse.class, param);
         System.out.println(response);
+        Thread.interrupted();
+        Thread.currentThread().interrupt();
+        Thread.currentThread().isInterrupted();
         return response.getAccessToken();
     }
 }
