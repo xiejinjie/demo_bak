@@ -4,14 +4,13 @@ import com.demo.qywx.wx.WxApi;
 import com.demo.qywx.wx.WxContent;
 import com.demo.qywx.wx.WxRestTemplate;
 import com.demo.qywx.wx.response.TokenResponse;
-import com.sun.jndi.toolkit.url.Uri;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
