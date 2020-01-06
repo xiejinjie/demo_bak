@@ -1,5 +1,7 @@
-package com.demo.quartz;
+package com.demo.quartz.sample;
 
+import com.demo.quartz.job.MyCronJob;
+import com.demo.quartz.job.MyJob;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

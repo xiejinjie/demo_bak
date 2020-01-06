@@ -1,4 +1,4 @@
-package com.demo.quartz.demo;
+package com.demo.quartz.job;
 
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;

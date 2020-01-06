@@ -1,5 +1,6 @@
-package com.demo.quartz;
+package com.demo.quartz.sample;
 
+import com.demo.quartz.JobDemoService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.quartz.*;
