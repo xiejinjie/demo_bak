@@ -1,10 +1,10 @@
 package com.demo.quartz.sample;
 
-import com.demo.quartz.JobDemoService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
@@ -14,6 +14,7 @@ import javax.annotation.PostConstruct;
  * 1.初始化默认任务
  * 2.提交修改删除任务
  */
+@Profile("sample")
 @Component
 public class TaskSchedulerUtil {
     private static Log log = LogFactory.getLog(TaskSchedulerUtil.class);
@@ -29,7 +30,7 @@ public class TaskSchedulerUtil {
             JobDetail jobDetail = JobBuilder.newJob(JobDemoService.class)
                 .withIdentity("job", "test")
                 .build();
-            String cron = "10 * * * * ?";
+            String cron = "0/3 * * * * ?";
             jobDetail.getJobDataMap().put("cron", cron);
             CronTrigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity("trigger", "t1")
