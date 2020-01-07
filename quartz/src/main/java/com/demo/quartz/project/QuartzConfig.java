@@ -26,7 +26,7 @@ public class QuartzConfig {
     @Bean("syncJobDetail")
     public JobDetail syncJobDetail(){
         return newJob(SyncJob.class)
-            .withIdentity("syncJob", "sync")
+            .withIdentity("syncJob", "project")
             .storeDurably()
             .build();
     }
@@ -38,7 +38,7 @@ public class QuartzConfig {
     public Trigger syncTrigger(@Qualifier("syncJobDetail") JobDetail syncJobDetail){
         // 每天晚上两点执行数据同步任务
         Trigger trigger = newTrigger()
-                .withIdentity("syncTrigger", "sync")
+                .withIdentity("syncTrigger", "project")
                 .withSchedule(cronSchedule("0/30 * * * * ?"))
                 .forJob(syncJobDetail)
                 .build();
@@ -60,11 +60,11 @@ public class QuartzConfig {
             // define the job and tie it to our HelloJob class
             System.out.println("=========创建任务==========");
             JobDetail job = newJob(SyncJob.class)
-                .withIdentity("job1", "group1")
+                .withIdentity("job1", "jdbc")
                 .build();
             // Trigger the job to run now, and then repeat every 40 seconds
             Trigger trigger = newTrigger()
-                .withIdentity("trigger1", "group1")
+                .withIdentity("trigger1", "jdbc")
                 .startNow()
                 .withSchedule(simpleSchedule()
                     .withIntervalInSeconds(4))

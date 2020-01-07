@@ -18,7 +18,7 @@ public class QuartzConfig {
     // 使用jobDetail包装job
     @Bean
     public JobDetail myJobDetail(){
-        return JobBuilder.newJob(MyJob.class).storeDurably().build();
+        return JobBuilder.newJob(MyJob.class).withIdentity("myJob", "sample").storeDurably().build();
     }
 
     // 把jobDetail注册到trigger上去
@@ -27,7 +27,7 @@ public class QuartzConfig {
         SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(15).repeatForever();
         return TriggerBuilder.newTrigger()
             .forJob(myJobDetail())
-            .withIdentity("myJobTrigger")
+            .withIdentity("myJobTrigger","sample")
             .withSchedule(scheduleBuilder)
             .build();
     }
@@ -35,7 +35,7 @@ public class QuartzConfig {
     // 使用jobDetail包装job
     @Bean
     public JobDetail myCronJobDetail() {
-        return JobBuilder.newJob(MyCronJob.class).withIdentity("myCronJob").storeDurably().build();
+        return JobBuilder.newJob(MyCronJob.class).withIdentity("myCronJob", "sample").storeDurably().build();
     }
 
     // 把jobDetail注册到Cron表达式的trigger上去
@@ -44,7 +44,7 @@ public class QuartzConfig {
         CronScheduleBuilder cronScheduleBuilder = CronScheduleBuilder.cronSchedule("0/10 * * * * ?");
         return TriggerBuilder.newTrigger()
             .forJob(myCronJobDetail())
-            .withIdentity("myCronJobTrigger")
+            .withIdentity("myCronJobTrigger", "sample")
             .withSchedule(cronScheduleBuilder)
             .build();
     }
