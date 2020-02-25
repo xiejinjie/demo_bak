@@ -17,6 +17,7 @@
     <modules>
         <module>demo-quartz</module>
         <module>demo-caffeine</module>
+        <module>demo-image</module>
     </modules>
     <dependencies>
         <!-- springboot-->
