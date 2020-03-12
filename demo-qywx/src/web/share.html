@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <title>任务详情</title>
+  <link rel="stylesheet" type="text/css" href="share.css"/>
+</head>
+
+<body>
+  <div class="wxapi_container">
+    <div class="wxapi_index_container">
+      <ul class="label_box lbox_close wxapi_index_list">
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-basic">基础接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-share">分享接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-image">图像接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-voice">音频接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-device">设备信息接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-location">地理位置接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-webview">界面操作接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-scan">微信扫一扫接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-enterprise">通讯录接口</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-previewfile">文件预览</a></li>
+        <li class="label_item wxapi_index_item"><a class="label_inner" href="#menu-openDefaultBrowser">打开系统默认浏览器</a>
+        </li>
+      </ul>
+    </div>
+    <div class="lbox_close wxapi_form">
+      <h3 id="menu-basic">基础接口</h3><span class="desc">判断当前客户端是否支持指定JS接口</span>
+      <button class="btn btn_primary" onClick="checkJsApi()">checkJsApi</button>
+      <h3 id="menu-share">分享接口</h3>
+      <span class="desc">获取“转发”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" onClick="onMenuShareAppMessage()">onMenuShareAppMessage</button>
+      <span class="desc">获取“微信”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" onClick="onMenuShareWechat()">onMenuShareWechat</button>
+      <span class="desc">获取“分享到朋友圈”按钮点击状态及自定义分享内容接口</span>
+      <button class="btn btn_primary" onClick="onMenuShareTimeline()">onMenuShareTimeline</button>
+      <span class="desc">自定义转发到会话</span>
+      <button class="btn btn_primary" onClick="shareAppMessage()">shareAppMessage</button>
+      <span class="desc">自定义转发到微信</span>
+      <button class="btn btn_primary" onClick="shareWechatMessage()">shareWechatMessage</button>
+      <h3 id="menu-image">图像接口</h3>
+      <span class="desc">拍照或从手机相册中选图接口</span>
+      <button class="btn btn_primary" onClick="chooseImage()">chooseImage</button>
+      <span class="desc">预览图片接口</span>
+      <button class="btn btn_primary" onClick="previewImage()">previewImage</button>
+      <span class="desc">上传图片接口</span>
+      <button class="btn btn_primary" onClick="uploadImage()">uploadImage</button>
+      <span class="desc">下载图片接口</span>
+      <button class="btn btn_primary" onClick="downloadImage()">downloadImage</button>
+      <h3 id="menu-voice">音频接口</h3>
+      <span class="desc">开始录音接口</span>
+      <button class="btn btn_primary" onClick="startRecord()">startRecord</button>
+      <span class="desc">停止录音接口</span>
+      <button class="btn btn_primary" onClick="stopRecord()">stopRecord</button>
+      <span class="desc">播放语音接口</span>
+      <button class="btn btn_primary" onClick="playVoice()">playVoice</button>
+      <span class="desc">暂停播放接口</span>
+      <button class="btn btn_primary" onClick="pauseVoice()">pauseVoice</button>
+      <span class="desc">停止播放接口</span>
+      <button class="btn btn_primary" onClick="stopVoice()">stopVoice</button>
+      <span class="desc">上传语音接口</span>
+      <button class="btn btn_primary" onClick="uploadVoice()">uploadVoice</button>
+      <span class="desc">下载语音接口</span>
+      <button class="btn btn_primary" onClick="downloadVoice()">downloadVoice</button>
+      <h3 id="menu-device">设备信息接口</h3>
+      <span class="desc">获取网络状态接口</span>
+      <button class="btn btn_primary" onClick="getNetworkType()">getNetworkType</button>
+      <h3 id="menu-location">地理位置接口</h3>
+      <span class="desc">使用企业微信内置地图查看位置接口</span>
+      <button class="btn btn_primary" onClick="openLocation()">openLocation</button>
+      <span class="desc">获取地理位置接口</span>
+      <button class="btn btn_primary" onClick="getLocation()">getLocation</button>
+      <h3 id="menu-webview">界面操作接口</h3>
+      <span class="desc">监听页面返回事件</span>
+      <button class="btn btn_primary" onClick="onHistoryBack()">onHistoryBack</button>
+      <span class="desc">隐藏右上角菜单接口</span>
+      <button class="btn btn_primary" onClick="hideOptionMenu()">hideOptionMenu</button>
+      <span class="desc">显示右上角菜单接口</span>
+      <button class="btn btn_primary" onClick="showOptionMenu()">showOptionMenu</button>
+      <span class="desc">关闭当前网页窗口接口</span>
+      <button class="btn btn_primary" onClick="closeWindow()">closeWindow</button>
+      <span class="desc">批量隐藏功能按钮接口</span>
+      <button class="btn btn_primary" onClick="hideMenuItems()">hideMenuItems</button>
+      <span class="desc">批量显示功能按钮接口</span>
+      <button class="btn btn_primary" onClick="showMenuItems()">showMenuItems</button>
+      <span class="desc">隐藏所有非基础按钮接口</span>
+      <button class="btn btn_primary" onClick="hideAllNonBaseMenuItem()">hideAllNonBaseMenuItem</button>
+      <span class="desc">显示所有功能按钮接口</span>
+      <button class="btn btn_primary" onClick="showAllNonBaseMenuItem()">showAllNonBaseMenuItem</button>
+      <h3 id="menu-scan">企业微信扫一扫</h3>
+      <span class="desc">调起微信扫一扫接口</span>
+      <button class="btn btn_primary" onClick="scanQRCode0()">scanQRCode(企业微信处理结果)</button>
+      <button class="btn btn_primary" onClick="scanQRCode1()">scanQRCode(直接返回结果)</button>
+      <h3 id="menu-enterprise">通讯录接口</h3><span class="desc">通讯录选人接口</span>
+      <button class="btn btn_primary" onClick="selectEnterpriseContact()">selectEnterpriseContact</button>
+      <h3 id="menu-previewfile">文件接口</h3>
+      <span class="desc">文件预览接口</span>
+      <button class="btn btn_primary" onClick="previewFile()">previewFile</button>
+      <h3 id="menu-openDefaultBrowser">打开系统默认浏览器</h3>
+      <span class="desc">打开系统默认浏览器（仅支持PC端）</span>
+      <button class="btn btn_primary" onClick="openDefaultBrowser()">openDefaultBrowser</button>
+    </div>
+  </div>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+  <script type="text/javascript" src="share.js"></script>
+  <script></script>
+  <script>
+    var shareConfig = {
+      title: "\u4e92\u8054\u7f51\u4e4b\u5b50",
+      desc: "\u5728\u957f\u5927\u7684\u8fc7\u7a0b\u4e2d\uff0c\u6211\u624d\u6162\u6162\u53d1\u73b0\uff0c\u6211\u8eab\u8fb9\u7684\u6240\u6709\u4e8b\uff0c\u522b\u4eba\u8ddf\u6211\u8bf4\u7684\u6240\u6709\u4e8b\uff0c\u90a3\u4e9b\u6240\u8c13\u672c\u6765\u5982\u6b64\uff0c\u6ce8\u5b9a\u5982\u6b64\u7684\u4e8b\uff0c\u5b83\u4eec\u5176\u5b9e\u6ca1\u6709\u975e\u5f97\u5982\u6b64\uff0c\u4e8b\u60c5\u662f\u53ef\u4ee5\u6539\u53d8\u7684\u3002\u66f4\u91cd\u8981\u7684\u662f\uff0c\u6709\u4e9b\u4e8b\u65e2\u7136\u9519\u4e86\uff0c\u90a3\u5c31\u8be5\u505a\u51fa\u6539\u53d8\u3002",
+      link: "http://movie.douban.com/subject/25785114/",
+      imgUrl: "http://demo.open.weixin.qq.com/jssdk/images/p2166127561.jpg",
+      success: function (a) { alert("\u5df2\u5206\u4eab") },
+      cancel: function (a) { alert("\u5df2\u53d6\u6d88") }, fail: function (a) { alert(JSON.stringify(a)) }
+    }, images = { localId: [], serverId: [] }, voice = { localId: "", serverId: "" };
+    function checkJsApi() {
+      wx.checkJsApi({
+        jsApiList: jsApiList,
+        success: function (a) { alert(JSON.stringify(a)) }
+      });
+    }
+    function onMenuShareAppMessage() {
+      wx.onMenuShareAppMessage(shareConfig), alert("\u5df2\u6ce8\u518c\u83b7\u53d6\u201c\u8f6c\u53d1\u7ed9\u540c\u4e8b\u201d\u72b6\u6001\u4e8b\u4ef6");
+    }
+    function onMenuShareWechat() {
+      wx.onMenuShareWechat(shareConfig), alert("\u5df2\u6ce8\u518c\u83b7\u53d6\u201c\u5fae\u4fe1\u5206\u4eab\u7ed9\u670b\u53cb\u201d\u72b6\u6001\u4e8b\u4ef6");
+    }
+    function onMenuShareTimeline() {
+      wx.onMenuShareTimeline(shareConfig), alert("\u5df2\u6ce8\u518c\u83b7\u53d6\u201c\u5206\u4eab\u5230\u670b\u53cb\u5708\u201d\u72b6\u6001\u4e8b\u4ef6");
+    }
+    function shareAppMessage() {
+      wx.invoke("shareAppMessage", shareConfig, function (a) {
+        "shareAppMessage:ok" == a.err_msg && alert("\u5df2\u8f6c\u53d1\u5230\u4f1a\u8bdd"),
+          "shareAppMessage:cancel" == a.err_msg && alert("\u5df2\u53d6\u6d88")
+      });
+    }
+    function shareWechatMessage() {
+      alert("begin share")
+      wx.invoke("shareWechatMessage", shareConfig,
+        function (a) {
+          alert("share return:", a),
+            "shareWechatMessage:ok" == a.err_msg && alert("\u5df2\u8f6c\u53d1\u5230\u5fae\u4fe1"), "shareWechatMessage:cancel" == a.err_msg && alert("\u5df2\u53d6\u6d88")
+        });
+    }
+    function chooseImage() {
+      wx.chooseImage({
+        count: 1, sizeType: ["original", "compressed"], sourceType: ["album", "camera"],
+        success: function (a) {
+          images.localId = a.localIds, alert("\u5df2\u9009\u62e9 " + a.localIds.length + " \u5f20\u56fe\u7247");
+        }
+      });
+    }
+    function previewImage() {
+      wx.previewImage({
+        current: "http://img3.douban.com/view/photo/photo/public/p2152117150.jpg",
+        urls: ["http://img3.douban.com/view/photo/photo/public/p2152117150.jpg",
+          "http://img3.douban.com/view/photo/photo/public/p2152134700.jpg"]
+      });
+    }
+    function uploadImage() {
+      if (0 == images.localId.length)
+        return void alert("\u8bf7\u5148\u4f7f\u7528 chooseImage \u63a5\u53e3\u9009\u62e9\u56fe\u7247");
+      var f = 0, g = images.localId.length; images.serverId = [], b();
+    }
+    function downloadImage() {
+      if (0 === images.serverId.length)
+        return void alert("\u8bf7\u5148\u4f7f\u7528 uploadImage \u4e0a\u4f20\u56fe\u7247");
+      var f = 0, g = images.serverId.length; images.localId = [], c();
+    }
+    function startRecord() {
+      wx.startRecord({ cancel: function () { alert("\u7528\u6237\u62d2\u7edd\u6388\u6743\u5f55\u97f3") } });
+    }
+    function stopRecord() {
+      wx.stopRecord({
+        success: function (a) { voice.localId = a.localId },
+        fail: function (a) { alert(JSON.stringify(a)) }
+      });
+    }
+    function playVoice() {
+      if ("" == voice.localId)
+        return void alert("\u8bf7\u5148\u4f7f\u7528 startRecord \u63a5\u53e3\u5f55\u5236\u4e00\u6bb5\u58f0\u97f3");
+      wx.playVoice({ localId: voice.localId });
+    }
+    function pauseVoice() {
+      wx.pauseVoice({ localId: voice.localId });
+    }
+    function stopVoice() {
+      wx.stopVoice({ localId: voice.localId });
+    }
+    function uploadVoice() {
+      if ("" == voice.localId)
+        return void alert("\u8bf7\u5148\u4f7f\u7528 startRecord \u63a5\u53e3\u5f55\u5236\u4e00\u6bb5\u58f0\u97f3");
+      wx.uploadVoice({
+        localId: voice.localId,
+        success: function (a) {
+          alert("\u4e0a\u4f20\u8bed\u97f3\u6210\u529f\uff0cserverId \u4e3a" + a.serverId), voice.serverId = a.serverId
+        }
+      });
+    }
+    function downloadVoice() {
+      if ("" == voice.serverId)
+        return void alert("\u8bf7\u5148\u4f7f\u7528 uploadVoice \u4e0a\u4f20\u58f0\u97f3");
+      wx.downloadVoice({
+        serverId: voice.serverId,
+        success: function (a) {
+          alert("\u4e0b\u8f7d\u8bed\u97f3\u6210\u529f\uff0clocalId \u4e3a" + a.localId), voice.localId = a.localId
+        }
+      });
+    }
+    function getNetworkType() {
+      wx.getNetworkType({
+        success: function (a) {
+          alert(a.networkType)
+        }, fail: function (a) {
+          alert(JSON.stringify(a))
+        }
+      });
+    }
+    function openLocation() {
+      wx.openLocation({
+        latitude: 23.099994,
+        longitude: 113.32452,
+        name: "TIT \u521b\u610f\u56ed",
+        address: "\u5e7f\u5dde\u5e02\u6d77\u73e0\u533a\u65b0\u6e2f\u4e2d\u8def 397 \u53f7",
+        scale: 14,
+        infoUrl: "http://weixin.qq.com"
+      });
+    }
+    function getLocation() {
+      wx.getLocation({
+        success: function (a) {
+          alert(JSON.stringify(a))
+        }, cancel: function (a) {
+          alert("\u7528\u6237\u62d2\u7edd\u6388\u6743\u83b7\u53d6\u5730\u7406\u4f4d\u7f6e")
+        }
+      });
+    }
+    function hideOptionMenu() {
+      wx.hideOptionMenu();
+    }
+    function showOptionMenu() {
+      wx.showOptionMenu();
+    }
+    function closeWindow() {
+      wx.closeWindow();
+    }
+    function onHistoryBack() {
+      wx.onHistoryBack(function () {
+        return confirm("\u786e\u5b9a\u8981\u653e\u5f03\u5f53\u524d\u9875\u9762\u7684\u4fee\u6539\uff1f")
+      }), alert("\u5df2\u6ce8\u518c\u83b7\u53d6\u201c\u9875\u9762\u8fd4\u56de\u201d\u72b6\u6001\u4e8b\u4ef6");
+    }
+    function hideMenuItems() {
+      wx.hideMenuItems({
+        menuList: ["menuItem:share:appMessage", "menuItem:share:wechat", "menuItem:favorite"],
+        success: function (a) {
+          alert("\u5df2\u9690\u85cf\u201c\u8f6c\u53d1\u201d\uff0c\u201c\u5fae\u4fe1\u201d\uff0c\u201c\u6536\u85cf\u201d\u6309\u94ae")
+        },
+        fail: function (a) { alert(JSON.stringify(a)) }
+      });
+    }
+    function showMenuItems() {
+      wx.showMenuItems({ menuList: ["menuItem:share:appMessage", "menuItem:share:wechat", "menuItem:favorite"] });
+    }
+    function hideAllNonBaseMenuItem() {
+      wx.hideAllNonBaseMenuItem({
+        success: function () { alert("\u5df2\u9690\u85cf\u6240\u6709\u975e\u57fa\u672c\u83dc\u5355\u9879") }
+      });
+    }
+    function showAllNonBaseMenuItem() {
+      wx.showAllNonBaseMenuItem({
+        success: function () {
+          alert("\u5df2\u663e\u793a\u6240\u6709\u975e\u57fa\u672c\u83dc\u5355\u9879")
+        }
+      });
+    }
+    function scanQRCode0() { wx.scanQRCode(); }
+    function scanQRCode1() {
+      wx.scanQRCode({ needResult: 1, desc: "scanQRCode desc", success: function (a) { alert(JSON.stringify(a)) } });
+    }
+    function openEnterpriseChat() {
+      wx.invoke("openEnterpriseChat", {
+        userIds: "zhangshan;lisi;wangwu",
+        groupName: "\u8ba8\u8bba\u7ec4"
+      }, function (a) {
+        a.errMsg.indexOf("function not exist") > -1 && alert("\u7248\u672c\u8fc7\u4f4e\u8bf7\u5347\u7ea7")
+      });
+    }
+    function selectEnterpriseContact() {
+      var h = wx.invoke || WeixinJSBridge.invoke;
+      h("selectEnterpriseContact", {
+        fromDepartmentId: -1, mode: "single", type: ["department", "user"], selectedDepartmentIds: [], selectedUserIds: []
+      }, function (a) {
+        if ("selectEnterpriseContact:ok" == a.err_msg) {
+          for (var b = a.result.departmentList, c = 0; c < b.length; c++) {
+            var d = b[c], e = (d.id, d.name); alert("\u90e8\u95e8\u540d\u79f0:" + e);
+          }
+          for (var f = a.result.userList, c = 0; c < f.length; c++) {
+            var g = f[c], h = (g.id, g.name); g.avatar; alert("\u7528\u6237\u540d\u79f0:" + h)
+          }
+        }
+      });
+    }
+    function previewFile() {
+      wx.previewFile({
+        url: "http://open.work.weixin.qq.com/wwopen/downloadfile/wwapi.zip",
+        name: "Android\u5f00\u53d1\u5de5\u5177\u5305\u96c6\u5408", size: 22189
+      });
+    }
+    function chooseInvoiceTitle() {
+      wx.invoke("chooseInvoiceTitle", { scene: "1" }, function (a) {
+        "chooseInvoiceTitle:ok" == a.err_msg && alert(a.choose_invoice_title_info), "chooseInvoiceTitle:fail" == a.err_msg && alert(a.err_msg),
+          "chooseInvoiceTitle:cancel" == a.err_msg && alert(a.err_msg)
+      });
+    }
+    function openDefaultBrowser() {
+      wx.invoke("openDefaultBrowser", { url: "https://open.work.weixin.qq.com" }, function (a) { alert(a.err_msg) })
+    }
+    wx.ready(function () {
+      checkJsApi()
+
+      var a = {
+        title: "\u4f01\u4e1a\u5fae\u4fe1JS-SDK Demo",
+        desc: "\u4f01\u4e1a\u5fae\u4fe1JS-SDK,\u5e2e\u52a9\u4f01\u4e1a\u63d0\u4f9b\u6700\u4f18\u8d28\u7684\u670d\u52a1",
+        link: "http://open.work.weixin.qq.com/wwopen/jsapidemo",
+        imgUrl: "http://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRt8Qia4lv7k3M9J1SKqKCImxJCt7j9rHYicKDI45jRPBxdzdyREWnk0ia0N5TMnMfth7SdxtzMvVgXg/0"
+      };
+      wx.onMenuShareAppMessage(a), wx.onMenuShareTimeline(a)
+    }), wx.error(function (a) { alert(a.errMsg) });
+
+  </script>
+</body>
+
+</html>

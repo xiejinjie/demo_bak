@@ -19,7 +19,12 @@
         <module>demo-caffeine</module>
         <module>demo-image</module>
         <module>demo-log</module>
+        <module>demo-qywx</module>
+        <module>demo-jvm</module>
     </modules>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <dependencies>
         <!-- springboot-->
         <dependency>
@@ -31,7 +36,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
-
     </dependencies>
     <build>
         <plugins>
