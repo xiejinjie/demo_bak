@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img id = "image" />
+</body>
+<script>
+    var imageurl = "http://localhost/post.jpg";
+    var http = new XMLHttpRequest();
+    // 添加时间戳禁用缓存
+    http.open("GET", imageurl+ "?_=" + new Date().getTime(), true);
+    http.onreadystatechange = function () {
+        // 检查资源是否可用
+        if (http.readyState == 2 && http.status == 200){
+            alert(1);
+            document.getElementById("image").setAttribute("src", imageurl);
+            // 不获取响应体
+            http.abort();
+        }
+    }
+    http.send();
+</script>
+</html>
