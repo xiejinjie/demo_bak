@@ -10,17 +10,18 @@ import java.io.*;
 import javax.imageio.ImageIO;
 /**
  * 图像压缩
+ * https://www.cnblogs.com/jmsjh/p/7843031.html 图片清晰度与压缩尺寸相关
  */
-public class CompressDemo {
+public class ImageIOCompress {
     public static void main(String[] args) throws IOException {
-        String inputFile = "demo-image/temp/test.jpeg";
-        String outputFile = "demo-image/temp/output.jpeg";
+        String inputFile = "demo-image/temp/test.jpg";
+        String outputFile = "demo-image/temp/output.jpg";
 
 //        zipWidthHeightImageFile(new File(inputFile), new File(outputFile),425,638,0.7f);
 
         zipImageFile(new File(inputFile), new File(outputFile),500,0,0.7f);
 
-        //zipImageFile(new File("C:\\spider\\3.jpg"),new File("C:\\spider\\3-3.jpg"),425,638,0.7f);
+//        zipImageFile(new File("C:\\spider\\3.jpg"),new File("C:\\spider\\3-3.jpg"),425,638,0.7f);
 
         System.out.println("ok");
     }

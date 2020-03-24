@@ -11,5 +11,14 @@
 
     <artifactId>demo-image</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.im4java</groupId>
+            <artifactId>im4java</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+    </dependencies>
+
 
 </project>
