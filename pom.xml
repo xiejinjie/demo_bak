@@ -8,36 +8,25 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <name>demo</name>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath /> <!-- lookup parent from repository -->
-    </parent>
     <modules>
-        <module>demo-image</module>
-        <module>demo-log</module>
-        <module>demo-qywx</module>
-        <module>demo-jvm</module>
-        <module>demo-spring-cloud</module>
-        <module>demo-middleware</module>
-        <module>demo-spring</module>
-        <module>demo-spring-boot</module>
-        <module>demo-international</module>
+        <module>template-springboot</module>
+        <module>demo-graphql</module>
+<!--        <module>demo-image</module>-->
+<!--        <module>demo-log</module>-->
+<!--        <module>demo-qywx</module>-->
+<!--        <module>demo-jvm</module>-->
+<!--        <module>demo-spring-cloud</module>-->
+<!--        <module>demo-middleware</module>-->
+<!--        <module>demo-spring</module>-->
+<!--        <module>demo-spring-boot</module>-->
+<!--        <module>demo-international</module>-->
+<!--        <module>demo-design-pattern</module>-->
+
     </modules>
     <properties>
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.5</version>
-        </dependency>
     </dependencies>
 </project>
