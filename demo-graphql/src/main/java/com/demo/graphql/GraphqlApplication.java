@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2019/11/18 15:39
  */
 @SpringBootApplication
-public class Application {
+public class GraphqlApplication {
     public static void main(String[] args){
-        SpringApplication.run(Application.class);
+        SpringApplication.run(GraphqlApplication.class);
     }
 }

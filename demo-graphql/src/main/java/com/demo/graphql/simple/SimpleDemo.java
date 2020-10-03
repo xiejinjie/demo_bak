@@ -8,6 +8,7 @@ import graphql.schema.idl.RuntimeWiring;
 import graphql.schema.idl.SchemaGenerator;
 import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
+import org.junit.Test;
 
 /**
  * @author jj
@@ -15,7 +16,7 @@ import graphql.schema.idl.TypeDefinitionRegistry;
  */
 public class SimpleDemo {
     public static void main(String[] args) {
-        // SDL
+        // SDL （Schema Definition Language）
         String schema = "type Query{hello: String} schema{query: Query}";
 
         SchemaParser schemaParser = new SchemaParser();
@@ -32,5 +33,10 @@ public class SimpleDemo {
         ExecutionResult executionResult = build.execute("{hello}");
 
         System.out.println(executionResult.getData().toString());
+    }
+
+    @Test
+    public void fun1() {
+
     }
 }

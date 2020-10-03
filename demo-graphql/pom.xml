@@ -11,6 +11,7 @@
 
     <groupId>com.demo</groupId>
     <artifactId>demo-graphql</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,57 +49,6 @@
             <artifactId>guava</artifactId>
             <version>26.0-jre</version>
         </dependency>
-
-
-
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphql-spring-boot-starter</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>altair-spring-boot-starter</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--            <scope>runtime</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphiql-spring-boot-starter</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>voyager-spring-boot-starter</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphql-kickstart-spring-boot-starter-tools</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphql-java-spring-boot-starter-webmvc</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphql-kickstart-spring-support</artifactId>-->
-<!--            <version>7.1.0</version>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphql-spring-boot-starter-test</artifactId>-->
-<!--            <version>7.0.1</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.graphql-java-kickstart</groupId>-->
-<!--            <artifactId>graphql-java-tools</artifactId>-->
-<!--            <version>5.7.1</version>-->
-<!--        </dependency>-->
-<!-- test -->
     </dependencies>
     <build>
         <plugins>
