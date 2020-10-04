@@ -1,0 +1,27 @@
+# 添加注释『#』
+# 操作名称(query, mutation, subscription)
+# 变量 $variable:type=default
+query bookInfo($id: ID="book-1", $withAuthor: Boolean=false) {
+    # 使用变量
+    book(id: $id) {
+        # 元字段『__』
+        __typename
+        # 选择SDL中定义字段
+        id
+        name
+        # 别名『:』
+        count: pageCount
+        # 指令 @include(if: Boolean)，@skip(if: Boolean)
+        author @include(if: $withAuthor){
+            # 引用片段『...』
+            ...authorFields
+        }
+    }
+}
+
+# 片段
+fragment authorFields on Author {
+  id
+  firstName
+  lastName
+}

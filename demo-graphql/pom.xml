@@ -33,12 +33,12 @@
             <version>4.5</version>
         </dependency>
         <!--graphql-->
-        <!--1. graphql springboot 依赖 -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java</artifactId>
             <version>11.0</version>
         </dependency>
+        <!-- graphql springboot -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-spring-boot-starter-webmvc</artifactId>
