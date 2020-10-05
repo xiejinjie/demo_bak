@@ -12,10 +12,6 @@
     <artifactId>template-springboot</artifactId>
     <version>1.0</version>
 
-    <properties>
-        <kotlin.version>1.3.70</kotlin.version>
-    </properties>
-
     <dependencies>
         <!-- springboot -->
         <dependency>
