@@ -9,9 +9,15 @@
     <version>1.0</version>
     <name>demo</name>
     <modules>
+        <!-- template -->
         <module>template-springboot</module>
-        <module>demo-graphql</module>
-        <module>demo-graphql-kickstart</module>
+        <!-- demo -->
+<!--        <module>demo-springboot</module>-->
+<!--        <module>demo-graphql</module>-->
+<!--        <module>demo-graphql-kickstart</module>-->
+<!--        <module>demo-graphql2</module>-->
+<!--        <module>demo-quartz</module>-->
+<!--        <module>demo-caffeine</module>-->
 <!--        <module>demo-image</module>-->
 <!--        <module>demo-log</module>-->
 <!--        <module>demo-qywx</module>-->
