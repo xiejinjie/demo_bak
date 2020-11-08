@@ -1,7 +1,6 @@
-package com.demo.middleware.rocketmq.transaction;
+package com.demo.rocketmq.transaction;
 
-import com.demo.middleware.rocketmq.RocketMqCommon;
-import org.apache.rocketmq.client.exception.MQBrokerException;
+import com.demo.rocketmq.RocketMqCommon;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.LocalTransactionState;
 import org.apache.rocketmq.client.producer.SendResult;
@@ -10,7 +9,6 @@ import org.apache.rocketmq.client.producer.TransactionMQProducer;
 import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
-import org.apache.rocketmq.remoting.exception.RemotingException;
 
 import java.io.IOException;
 

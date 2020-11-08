@@ -1,6 +1,6 @@
-package com.demo.middleware.rocketmq.simple2;
+package com.demo.rocketmq.simple2;
 
-import com.demo.middleware.rocketmq.RocketMqCommon;
+import com.demo.rocketmq.RocketMqCommon;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.common.message.Message;

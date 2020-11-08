@@ -1,6 +1,6 @@
-package com.demo.middleware.rocketmq.simple;
+package com.demo.rocketmq.simple;
 
-import com.demo.middleware.rocketmq.RocketMqCommon;
+import com.demo.rocketmq.RocketMqCommon;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyContext;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;

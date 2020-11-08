@@ -1,6 +1,6 @@
-package com.demo.middleware.rocketmq.simple2;
+package com.demo.rocketmq.simple2;
 
-import com.demo.middleware.rocketmq.RocketMqCommon;
+import com.demo.rocketmq.RocketMqCommon;
 import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
 import org.apache.rocketmq.client.consumer.PullResult;
 import org.apache.rocketmq.client.consumer.PullStatus;

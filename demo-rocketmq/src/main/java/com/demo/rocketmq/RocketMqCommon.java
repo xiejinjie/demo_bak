@@ -1,4 +1,4 @@
-package com.demo.middleware.rocketmq;
+package com.demo.rocketmq;
 
 
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
@@ -58,7 +58,6 @@ public class RocketMqCommon {
 
 
     public static class DefaultConsumerListener implements MessageListenerConcurrently {
-        @Override
         public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
             try {
                 MessageExt messageExt = list.get(0);

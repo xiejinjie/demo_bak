@@ -1,6 +1,6 @@
-package com.demo.middleware.rocketmq.transaction;
+package com.demo.rocketmq.transaction;
 
-import com.demo.middleware.rocketmq.RocketMqCommon;
+import com.demo.rocketmq.RocketMqCommon;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.exception.MQClientException;
 

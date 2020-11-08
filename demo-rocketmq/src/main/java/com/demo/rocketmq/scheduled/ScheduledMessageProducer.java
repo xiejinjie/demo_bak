@@ -1,6 +1,6 @@
-package com.demo.middleware.rocketmq.scheduled;
+package com.demo.rocketmq.scheduled;
 
-import com.demo.middleware.rocketmq.RocketMqCommon;
+import com.demo.rocketmq.RocketMqCommon;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.rocketmq.client.exception.MQBrokerException;
 import org.apache.rocketmq.client.exception.MQClientException;
