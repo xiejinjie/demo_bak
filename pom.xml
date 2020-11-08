@@ -12,7 +12,7 @@
         <!-- template -->
         <module>template-springboot</module>
         <!-- demo -->
-<!--        <module>demo-springboot</module>-->
+        <module>demo-springboot</module>
 <!--        <module>demo-graphql</module>-->
 <!--        <module>demo-graphql-kickstart</module>-->
 <!--        <module>demo-graphql2</module>-->
@@ -23,12 +23,11 @@
 <!--        <module>demo-qywx</module>-->
 <!--        <module>demo-jvm</module>-->
 <!--        <module>demo-spring-cloud</module>-->
-<!--        <module>demo-middleware</module>-->
+<!--        <module>demo-rocketmq</module>-->
 <!--        <module>demo-spring</module>-->
 <!--        <module>demo-spring-boot</module>-->
 <!--        <module>demo-international</module>-->
 <!--        <module>demo-design-pattern</module>-->
-
     </modules>
     <properties>
         <java.version>1.8</java.version>
