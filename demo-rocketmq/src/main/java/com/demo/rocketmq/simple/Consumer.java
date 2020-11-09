@@ -24,7 +24,7 @@ public class Consumer {
         // 2.设置NameServer地址，如果设置环境变量NAME_SERVER_ADDR可省略此步骤
         consumer.setNamesrvAddr(RocketMqCommon.NAME_SERVER_ADDR);
         // 3.订阅对应的主题和tag
-        consumer.subscribe("RocketMQDemo", "*");
+        consumer.subscribe(RocketMqCommon.DEFAULT_TOPIC_NAME, "*");
         // 4.注册消息接收后处理接口
         consumer.registerMessageListener(new MessageListenerConcurrently() {
             @Override
