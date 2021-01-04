@@ -9,6 +9,8 @@
     <version>1.0</version>
     <name>demo</name>
     <modules>
+        <!-- test -->
+        <module>demo-test</module>
         <!-- template -->
         <module>template-springboot</module>
         <!-- demo -->
@@ -31,6 +33,7 @@
         <!--MQ demo-->
         <module>demo-rocketmq</module>
         <module>demo-netty</module>
+        <module>demo-akka</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

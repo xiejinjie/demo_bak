@@ -11,9 +11,8 @@ import java.util.stream.LongStream;
 public class ForkJoinSumCalculator extends RecursiveTask<Long> {
 
     public static final ForkJoinPool FORK_JOIN_POOL = new ForkJoinPool();
-
-    public static final long THRESHOLD = 10_000;
     // 不再将任务分 解为子任务的 数组大小
+    public static final long THRESHOLD = 10_000;
     private final long[] numbers;
     // 子任务处理起始和终止位置
     private final int start;
